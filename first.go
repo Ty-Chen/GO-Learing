@@ -1,7 +1,9 @@
+
 package main
 
 import ("fmt")
 
-func main()  {
+
+func first()  {
 	fmt.Println("my first go lang")
 }
