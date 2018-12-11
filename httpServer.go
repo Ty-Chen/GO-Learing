@@ -5,7 +5,24 @@ import (
     "io"
     "log"
     "net/http"
+    "strings"
 )
+
+func sayHellowName(w http.ResponseWriter, r *http.Request){
+    r.ParseForm()   //解析参数，默认不会解析
+    fmt.Println(r.Form)  //输出到服务端的打印信息
+    fmt.Println("path", r.URL.Path)
+    fmt.Println("Scheme", r.URL.Scheme)
+    fmt.Println(r.Form["url_long"])
+
+    for k, v := range r.Form{
+        fmt.Println("key:", k)
+        fmt.Println("val:", strings.Join(v, ""))
+    }
+
+    fmt.Fprintf(w, "hello go web server")    //输出到客户端
+
+}
 
 // hello world, the web server
 // w: 给客户端回复数据， req: 读取客户端发送的数据
@@ -21,14 +38,22 @@ func HelloServer(w http.ResponseWriter, req *http.Request) {
     w.Write([]byte("lisa"))
 }
 
-func main() {
-    // 注册函数，用户连接， 自动调用指定处理函数
-    http.HandleFunc("/hello", HelloServer)
-
+func httpServer(port string){   
     // 监听绑定
-    err := http.ListenAndServe("127.0.0.1:12345", nil)
+    err := http.ListenAndServe(port, nil)
     if err != nil {
         log.Fatal("ListenAndServe: ", err)
-    }
+    }    
+}
+
+func main() {
+    fmt.Println("server start")
+    // 注册函数，用户连接， 自动调用指定处理函数
+    //http.HandleFunc("/hello", HelloServer)
+    http.HandleFunc("/", sayHellowName)
+
+    //go httpServer("9191")
+    httpServer(":9090")
+    
 }
 
