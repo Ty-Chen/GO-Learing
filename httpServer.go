@@ -52,6 +52,10 @@ func main() {
     //http.HandleFunc("/hello", HelloServer)
     http.HandleFunc("/", sayHellowName)
 
+    /*增加Http路径地址
+    fsh := http.FileServer(http.Dir("/"))
+    http.Handle("/", httpStripPrefix("/", fsh))
+    */
     //go httpServer("9191")
     httpServer(":9090")
     
