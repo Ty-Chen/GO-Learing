@@ -46,7 +46,7 @@ func httpServer(port string){
     }    
 }
 
-func main() {
+func server() {
     fmt.Println("server start")
     // 注册函数，用户连接， 自动调用指定处理函数
     //http.HandleFunc("/hello", HelloServer)
