@@ -46,3 +46,14 @@ func setSlice() {
 	fmt.Println(s1)
 	fmt.Println(s2)
 }
+
+func loopSlice() {	
+	var s = []int{1, 2, 3, 4, 5}
+	for index := range s {
+		fmt.Println(index, s[index])
+	}
+
+	for index, value := range s {
+		fmt.Println(index, value)
+	}
+}
