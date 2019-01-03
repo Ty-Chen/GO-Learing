@@ -57,3 +57,40 @@ func loopSlice() {
 		fmt.Println(index, value)
 	}
 }
+
+func appendSlice() {
+	var s1 = []int{1, 2, 3, 4, 5}
+	fmt.Println(s1, len(s1), cap(s1))
+
+	 // 对满容的切片进行追加会分离底层数组
+	 var s2 = append(s1, 6)
+	 fmt.Println(s1, len(s1), cap(s1))
+	 fmt.Println(s2, len(s2), cap(s2))
+	
+	 // 对非满容的切片进行追加会共享底层数组
+	 var s3 = append(s2, 7)
+	 fmt.Println(s2, len(s2), cap(s2))
+	 fmt.Println(s3, len(s3), cap(s3))
+}
+
+func cutSlice() {
+	var s1 = []int{1, 2, 3, 4, 5, 6, 7}
+	var s2 = s1[:5]
+	var s3 = s1[3:]
+	var s4 = s1[:]
+	fmt.Println(s1, len(s1), cap(s1))
+	fmt.Println(s2, len(s2), cap(s2))
+	fmt.Println(s3, len(s3), cap(s3))
+	fmt.Println(s4, len(s4), cap(s4))
+}
+
+func deepCopySlice() {
+	var s = make([]int, 5, 8)
+	for i := 0; i < len(s); i++ {
+	 s[i] = i+1
+	}
+	fmt.Println(s)
+	var d = make([]int, 2, 6)
+	var n = copy(d, s)
+	fmt.Println(n, d)
+}
