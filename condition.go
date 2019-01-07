@@ -52,3 +52,4 @@ func prize2(score int) string {
             return "优"
     }
 }
+
