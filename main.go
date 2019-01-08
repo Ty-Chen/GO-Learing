@@ -3,6 +3,6 @@ package main
 func main() {	
 	//first();
 	//server();
-	//vars();
-	initSlice();
+	//testVars();
+	testSlice();
 }
