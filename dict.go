@@ -45,8 +45,50 @@ func dictAdd() {
     fmt.Println(fruits)    
 }
 
+func dictReturn() {
+    var fruits = map[string]int {
+        "apple": 2,
+        "banana": 5,
+        "orange": 8,
+    }
+
+    var score, ok = fruits["durin"]
+    if ok {
+        fmt.Println(score)
+    } else {
+        fmt.Println("durin not exists")
+    }
+
+    fruits["durin"] = 0
+    score, ok = fruits["durin"]
+    if ok {
+        fmt.Println(score)
+    } else {
+        fmt.Println("durin still not exists")
+    }
+}
+
+func dictForEach(){
+    
+    var fruits = map[string]int {
+        "apple": 2,
+        "banana": 5,
+        "orange": 8,
+    }
+
+    for name, score := range fruits {
+        fmt.Println(name, score)
+    }
+
+    for name := range fruits {
+        fmt.Println(name)
+    }   
+}
+
 func testDict()  {
     dict();
     dict2();
     dict3();
+    dictAdd();
+    dictReturn();
 }
