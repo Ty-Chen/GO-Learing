@@ -94,3 +94,15 @@ func deepCopySlice() {
 	var n = copy(d, s)
 	fmt.Println(n, d)
 }
+
+func testSlice() {
+	makeSlice();
+	makeSlice2();
+	initSlice();
+	nullSlice();
+	setSlice();
+	loopSlice();
+	appendSlice();
+	cutSlice();
+	deepCopySlice();
+}
