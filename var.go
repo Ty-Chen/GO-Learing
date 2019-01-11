@@ -63,3 +63,8 @@ func variables() {
     var i float64 = 3.141592653
     fmt.Println(h, i)
 }
+
+func testVars() {
+    vars();
+    variables();
+}
