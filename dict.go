@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (   
+     "fmt"
+    "unsafe"
+)
 
 func dict() {
     var m map[int]string = make(map[int]string)
@@ -83,6 +86,17 @@ func dictForEach(){
     for name := range fruits {
         fmt.Println(name)
     }   
+}
+
+func dictSize() {
+
+    var fruits = map[string]int {
+        "apple": 2,
+        "banana": 5,
+        "orange": 8,        
+    }
+
+    fmt.Println(unsafe.Sizeof(fruits))
 }
 
 func testDict()  {
