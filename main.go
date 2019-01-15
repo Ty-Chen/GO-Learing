@@ -5,4 +5,6 @@ func main() {
 	//server();
 	//testVars();
 	testSlice();
+	testDict();
+	testStr();
 }
