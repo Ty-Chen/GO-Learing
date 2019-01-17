@@ -19,6 +19,12 @@ func strForEachByte() {
     }	
 }
 
+func cutStr() {
+    var s1 = "hello world"
+    var s2 = s1[3:8]
+    fmt.Println(s2)
+}
+
 func testStr() {
 	strForEachChar();
 	strForEachByte();
