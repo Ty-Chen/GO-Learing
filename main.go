@@ -7,4 +7,5 @@ func main() {
 	testSlice();
 	testDict();
 	testStr();
+	testCircle();
 }
