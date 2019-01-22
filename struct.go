@@ -8,7 +8,7 @@ type Circle struct{
 	Radius int
 }
 
-func initCircle() {
+func newCircle1() {
 	var c Circle = Circle {
         x: 100,
         y: 100,
@@ -17,6 +17,16 @@ func initCircle() {
     fmt.Printf("%+v\n", c)
 }
 
+func newCircle2() {
+    var c1 Circle = Circle {
+    Radius: 50,
+}
+    var c2 Circle = Circle {}
+    fmt.Printf("%+v\n", c1)
+    fmt.Printf("%+v\n", c2) 
+}
+
 func testCircle()  {
-	
+    newCircle1();
+    newCircle2();
 }
