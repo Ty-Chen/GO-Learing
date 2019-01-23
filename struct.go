@@ -20,10 +20,15 @@ func newCircle1() {
 func newCircle2() {
     var c1 Circle = Circle {
     Radius: 50,
-}
+    }
     var c2 Circle = Circle {}
     fmt.Printf("%+v\n", c1)
     fmt.Printf("%+v\n", c2) 
+}
+
+func newCircle3() {
+    var c Circle = Circle {100, 100, 50}
+    fmt.Printf("%+v\n", c)   
 }
 
 func testCircle()  {
