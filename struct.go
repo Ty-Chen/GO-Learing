@@ -31,6 +31,24 @@ func newCircle3() {
     fmt.Printf("%+v\n", c)   
 }
 
+func newCircle4() {
+    var c1 Circle = Circle {Radius: 50}
+    var c2 Circle = c1
+    fmt.Printf("%+v\n", c1)
+    fmt.Printf("%+v\n", c2)
+    c1.Radius = 100
+    fmt.Printf("%+v\n", c1)
+    fmt.Printf("%+v\n", c2)
+
+    var c3 *Circle = &Circle {Radius: 50}
+    var c4 *Circle = c3
+    fmt.Printf("%+v\n", c3)
+    fmt.Printf("%+v\n", c4)
+    c3.Radius = 100
+    fmt.Printf("%+v\n", c3)
+    fmt.Printf("%+v\n", c4)
+}
+
 func testCircle()  {
     newCircle1();
     newCircle2();
