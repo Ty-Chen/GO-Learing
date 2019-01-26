@@ -52,4 +52,6 @@ func newCircle4() {
 func testCircle()  {
     newCircle1();
     newCircle2();
+    newCircle3();
+    newCircle4();
 }
