@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "math"
+)
 
 type Circle struct{
 	x int
@@ -47,6 +50,16 @@ func newCircle4() {
     c3.Radius = 100
     fmt.Printf("%+v\n", c3)
     fmt.Printf("%+v\n", c4)
+}
+
+// 面积
+func (c Circle) Area() float64 {
+    return math.Pi * float64(c.Radius) * float64(c.Radius)
+   }
+   
+// 周长
+func (c Circle) Circumference() float64 {
+    return 2 * math.Pi * float64(c.Radius)
 }
 
 func testCircle()  {
