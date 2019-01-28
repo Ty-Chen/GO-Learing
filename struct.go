@@ -62,9 +62,18 @@ func (c Circle) Circumference() float64 {
     return 2 * math.Pi * float64(c.Radius)
 }
 
+func testFunc() {
+    var c = Circle {Radius: 50}
+    fmt.Println(c.Area(), c.Circumference())
+    // 指针变量调用方法形式上是一样的
+    var pc = &c
+    fmt.Println(pc.Area(), pc.Circumference())
+}
+
 func testCircle()  {
     newCircle1();
     newCircle2();
     newCircle3();
     newCircle4();
+    testFunc();
 }
