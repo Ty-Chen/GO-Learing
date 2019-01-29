@@ -71,9 +71,11 @@ func testFunc() {
 }
 
 func testCircle()  {
+    
     newCircle1();
     newCircle2();
     newCircle3();
     newCircle4();
     testFunc();
+
 }
