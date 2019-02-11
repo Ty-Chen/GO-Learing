@@ -70,12 +70,10 @@ func testFunc() {
     fmt.Println(pc.Area(), pc.Circumference())
 }
 
-func testCircle()  {
-    
+func testCircle()  {    
     newCircle1();
     newCircle2();
     newCircle3();
     newCircle4();
     testFunc();
-
 }
