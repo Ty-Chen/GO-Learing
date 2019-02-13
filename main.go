@@ -3,7 +3,7 @@ package main
 func main() {	
 	//first();
 	//server();
-	//testVars();
+	testVars();
 	testSlice();
 	testDict();
 	testStr();
