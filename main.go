@@ -8,4 +8,5 @@ func main() {
 	testDict();
 	testStr();
 	testCircle();
+	testInterface();
 }
