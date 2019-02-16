@@ -16,3 +16,6 @@ func (a Apple) smell() {
 	fmt.Println("apple can smell")
 }
 
+func testInterface()  {
+	
+}
