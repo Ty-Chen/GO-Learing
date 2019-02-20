@@ -10,6 +10,16 @@ type Eatable interface {
 	eat()
 }
 
+type Fruit struct {
+    Name string  // 属性变量
+    Eatable  // 匿名内嵌接口变量
+}
+
+func (f Fruit) want() {
+    fmt.Printf("I like ")
+    f.eat() // 外结构体会自动继承匿名内嵌变量的方法
+}
+
 type Apple struct {}
 
 func (a Apple) smell() {
@@ -18,6 +28,12 @@ func (a Apple) smell() {
 
 func (a Apple) eat() {
 	fmt.Println("apple can eat")
+}
+
+type Banana struct {}
+
+func (b Banana) eat() {
+    fmt.Println("eating banana")
 }
 
 type Flower struct {}
@@ -54,7 +70,15 @@ func testEmptyInterface() {
 	fmt.Println(age, address, married)	
 }
 
+func testMultiDeplo() {
+    var f1 = Fruit{"Apple", Apple{}}
+    var f2 = Fruit{"Banana", Banana{}}
+    f1.want()
+    f2.want()	
+}
+
 func testInterface()  {
 	testDiffInterface();
 	testEmptyInterface();
+	testMultiDeplo();
 }
