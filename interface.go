@@ -77,6 +77,33 @@ func testMultiDeplo() {
     f2.want()	
 }
 
+type Rect struct {
+    Width int
+    Height int
+}
+
+func testChange() {
+    var a interface {}
+    var r = Rect{50, 50}
+    a = r
+
+    var rx = a.(Rect)
+    r.Width = 100
+    r.Height = 100
+    fmt.Println(rx)
+}
+
+func testChange2() {
+    var a interface {}
+    var r = Rect{50, 50}
+    a = &r // 指向了结构体指针
+
+    var rx = a.(*Rect) // 转换成指针类型
+    r.Width = 100
+    r.Height = 100
+    fmt.Println(rx)	
+}
+
 func testInterface()  {
 	testDiffInterface();
 	testEmptyInterface();
