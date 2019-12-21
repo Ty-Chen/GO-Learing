@@ -9,5 +9,7 @@ func main() {
 	//testStr();
 	//testCircle();
 	//testInterface();
-	testChannel();
+	//testChannel();
+	//testTimer();
+	testTicker();
 }
