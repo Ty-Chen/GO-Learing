@@ -44,5 +44,12 @@ func testWorkerPools() {
 }
 
 func testWaitGroups() {
-	
+    var wg sync.WaitGroup
+    
+    for i := 1; i <= 5; i++ {
+        wg.Add(1)
+        go worker2(i, &wg)
+
+    wg.Wait()    
+    }
 }
