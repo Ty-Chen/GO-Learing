@@ -11,5 +11,8 @@ func main() {
 	//testInterface();
 	//testChannel();
 	//testTimer();
-	testTicker();
+	//testTicker();
+	//testWorkerPools();
+	//testWaitGroups();
+	testRateLimiter();
 }
