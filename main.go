@@ -14,5 +14,6 @@ func main() {
 	//testTicker();
 	//testWorkerPools();
 	//testWaitGroups();
-	testRateLimiter();
+	//testRateLimiter();
+	testMutex();
 }
