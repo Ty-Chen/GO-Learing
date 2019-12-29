@@ -15,5 +15,6 @@ func main() {
 	//testWorkerPools();
 	//testWaitGroups();
 	//testRateLimiter();
-	testMutex();
+	//testMutex();
+	testStateFulTest();
 }
