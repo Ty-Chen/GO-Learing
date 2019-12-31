@@ -16,5 +16,6 @@ func main() {
 	//testWaitGroups();
 	//testRateLimiter();
 	//testMutex();
-	testStateFulTest();
+	//testStateFulTest();
+	testSort();
 }
