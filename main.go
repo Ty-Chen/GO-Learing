@@ -17,5 +17,7 @@ func main() {
 	//testRateLimiter();
 	//testMutex();
 	//testStateFulTest();
-	testSort();
+	//testSort();
+	//testDefer();
+	testCollection();
 }
