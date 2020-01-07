@@ -19,5 +19,6 @@ func main() {
 	//testStateFulTest();
 	//testSort();
 	//testDefer();
-	testCollection();
+	//testCollection();
+	testRand();
 }
