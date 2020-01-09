@@ -20,5 +20,6 @@ func main() {
 	//testSort();
 	//testDefer();
 	//testCollection();
-	testRand();
+	//testRand();
+	testReadFile();
 }
