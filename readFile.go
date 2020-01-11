@@ -8,12 +8,6 @@ import (
     "os"
 )
 
-func check(e error) {
-    if e != nil {
-        panic(e)
-    }
-}
-
 func testReadFile() {
 
     dat, err := ioutil.ReadFile("/tmp/dat")
