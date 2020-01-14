@@ -21,5 +21,6 @@ func main() {
 	//testDefer();
 	//testCollection();
 	//testRand();
-	testReadFile();
+	//testReadFile();
+	testTemp();
 }

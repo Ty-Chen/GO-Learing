@@ -65,6 +65,6 @@ func testDir() {
     check(err)
 
     fmt.Println("Visiting subdir")
-    err = filepath.Walk("subdir", visit)
+    //err = filepath.Walk("subdir", visit)
 }
 
