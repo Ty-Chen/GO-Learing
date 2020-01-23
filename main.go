@@ -23,4 +23,5 @@ func main() {
 	//testRand();
 	//testReadFile();
 	//testTemp();
+	testCommand();
 }
