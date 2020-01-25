@@ -6,6 +6,12 @@ import (
     "flag"
 )
 
+func testCommand(){
+    testCommand1();
+    testCommand2();
+    testCommand3();
+}
+
 func testCommand1() {
 
     argsWithProg := os.Args
