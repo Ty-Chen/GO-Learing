@@ -24,5 +24,6 @@ func main() {
 	//testReadFile();
 	//testTemp();
 	//testCommand();
-	testEnv();
+	//testEnv();
+	testHttpClient();
 }

@@ -17,7 +17,7 @@ func testHttpClient() {
     fmt.Println("Response status:", resp.Status)
 
     scanner := bufio.NewScanner(resp.Body)
-    for i := 0; scanner.Scan() && i < 5; i++ {
+    for i := 0; scanner.Scan() && i < 20; i++ {
         fmt.Println(scanner.Text())
     }
 
