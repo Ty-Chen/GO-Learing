@@ -25,5 +25,7 @@ func main() {
 	//testTemp();
 	//testCommand();
 	//testEnv();
-	testHttpClient();
+	//testHttpClient();
+	//server();
+	testServer2();
 }
